@@ -1,33 +1,79 @@
-*{margin: 0px; padding: 0px; box-sizing: border-box; font-family: monospace; text-decoration: none; color: white; list-style: none;}
-
 body {
     background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
-    display: grid;
-    grid-template-rows: auto auto auto;
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: whitesmoke;
+    font-family: monospace;
 }
 
-nav{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 5vh;
+.parent {
+    display: grid;
+    place-items: center;
+    grid-template: 100px auto 200px / 300px auto 300px;
+}
+
+nav {
+    grid-column: 2/3;
+    display: flex;
+    place-items: center;
 }
 
 #logo {
     height: 50px;
 }
 
+#logoblock {
+    height: 50px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin: 4px
+}
+
 .navLinks{
   display: flex;
-  justify-content: space-around;
+  place-items: center;
 }
 
 li{
   font-size: 12px;
   font-weight: bold;
-  min-width: 60px;
+  min-width: 80px;
   text-align: center;
-  margin: 30px;
+  vertical-align: middle;
+  margin: 40px 15px 30px 15px;
+  list-style: none;
+}
+
+.rslinks {
+    display: inline;
+    width: 120px;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: .5ch;
+}
+
+button {
+    background-color: #0c2a38;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    border: 1px solid rgb(231, 188, 124);
+    font-family: monospace;
+}
+
+.icon {
+    margin: 40px 15px 30px 15px;
+    height: 15px;
 }
 
 .burger div{
@@ -39,43 +85,22 @@ li{
   display: none;
 }
 
-.section1{
-  display: grid;
-  justify-content: center;
-  font-size: 22px;
+.twothree {
+    grid-column: 2/3;
+    margin: 40px 30px 10px 30px;
 }
 
-.section2{
-    display: grid;
-    justify-content: center;
-    font-size: 22px;
-    background-color: white;
-  
-  }
 
-p{
-  margin: 100px;
-  text-align: center;
-}
+
+
+
+
 
 
 @media screen and (max-width:859px){
   
   .burger div{display: block;}
-  
-  .navLinks{ 
-    position: absolute;
-    right: 0px;
-    height: 90vh;
-    width: 30%;
-    top:10vh;
-    align-items: center;
-    background-color: #db504a;
-    display: none;
-    flex-direction: column;
-    opacity: 0%;
-    transition: opacity .3s ease-in;
-  }
+
   .navLinks li{opacity: 0%; transition: opacity .3s ease-in;}
   
   .navActive{opacity: 100%;}
