@@ -1,6 +1,8 @@
+body { margin: 0;}
+
 .parent {
     display: grid;
-    grid-template-columns: 10% auto auto 10%;
+    grid-template-columns: 15% auto auto 15%;
     grid-template-rows: 10% auto 10% 10%;
     font-family: monospace;
     background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
@@ -15,6 +17,7 @@
 
 ul {
     margin: 0 auto;
+    padding: 0px;
 }
 
 .horizontalLis {
@@ -84,6 +87,8 @@ button {
 .contentCard {
     margin: 20px 15px 40px 15px;
     background-color: white;
+    border: 1px solid rgb(214, 163, 21);
+    padding: 10px;
     color: rgb(65, 65, 65);
     text-align: left;
     font-size: 18px;
@@ -107,6 +112,7 @@ button {
     display: grid;
     grid-auto-columns: auto;
     background-color: #111111;
+    letter-spacing: 3px;
 }
 
 #footerColumn1 { 
