@@ -3,15 +3,14 @@ body { margin: 0;}
 .parent {
     display: grid;
     grid-template-columns: 15% auto 15%;
-    grid-template-rows: 10% auto auto 10%;
+    grid-template-rows: 150px auto auto 10%;
     font-family: monospace;
     background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
     color: white;
 }
 
 .header{
-    padding: 2rem 0px 2rem 0px;
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     font-size: 12px;
 }
 
@@ -74,7 +73,7 @@ button {
 /* FULL SITE WIDTH CONTENT SPACE */
 
 .fullWidthContent {
-    grid-column: 2 / 3;
+    grid-column: 1 / 4;
     margin-top: 20px;
     width: 100%;
     background-color: #ebf5ee;
@@ -134,4 +133,8 @@ button {
 }
 
 
-@media screen and (max-width: 800px){ }
+@media screen and (max-width: 1238){ 
+    * {
+        border: 2px solid red;
+    }
+}
