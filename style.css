@@ -1,6 +1,7 @@
 .parent {
     display: grid;
-    grid-template: 10% auto 10% / 10% auto 10%;
+    grid-template-columns: 10% auto auto 10%;
+    grid-template-rows: 10% auto 10% 10%;
     font-family: monospace;
     background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
     color: white;
@@ -50,19 +51,16 @@ button {
 
 .left-side {
      grid-column: 1 / 2;
-     padding: 1rem;
 }
 
 .right-side {
     grid-column: 3 / 4;
-    padding: 1rem;
 }
 
 /* PHOTO SPLASH CONTENT SPACE */
 
 .iframe {
     grid-column: 2 / 3;
-    padding: 1rem;
     color: white;
 }
 
@@ -73,35 +71,38 @@ button {
 /* FULL SITE WIDTH CONTENT SPACE */
 
 .fullWidthContent {
-    grid-column: 1 / 4;
+    grid-column: 2 / 3;
+    margin-top: 20px;
+    width: 100%;
     background-color: #ebf5ee;
     color: black;
     display: grid;
-    grid-template-columns: 10% auto auto auto 10%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     width: 100%;
 }
 
 .contentCard {
-    margin: 40px 15px 40px 15px;
-    border: 1px solid rgb(214, 163, 21);
-    background-color: #00334d;
-    color: white;
+    margin: 20px 15px 40px 15px;
+    background-color: white;
+    color: rgb(65, 65, 65);
     text-align: left;
-    font-size: 10px;
+    font-size: 18px;
 }
 
 .cCImg {
     width: 100%;
+    object-fit: scale-down;
 }
 
 .cCText {
-    display: block;
+    font-size: 10px;
 }
 
 /* FOOTER CONTENT*/
 
 .footer {
-    grid-column: 1 / 4;
+    grid-column: 2 / 4;
+    margin-top: 20px;
     padding: 2rem;
     display: grid;
     grid-auto-columns: auto;
@@ -118,6 +119,7 @@ button {
 
 #footerColumn3 { 
     grid-column: 3 / 4;
+    text-align: right;
 }
 
 .flis {
