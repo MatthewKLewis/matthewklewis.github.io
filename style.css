@@ -1,4 +1,8 @@
-body { margin: 0;}
+html { 
+    margin: 0; 
+    background-color: #111111;
+}
+
 
 .parent {
     display: grid;
@@ -20,7 +24,7 @@ ul {
 }
 
 .horizontalLis {
-    color: rgb(214, 163, 21);
+    color: white;
     display: inline;
     margin: 20px 10px 20px 10px;
 }
@@ -74,14 +78,20 @@ button {
 /* FULL SITE WIDTH CONTENT SPACE */
 
 .fullWidthContent {
-    grid-column: 2 / 3;
+    grid-column: 1 / 4;
     margin-top: 20px;
     width: 100%;
     background-color: #ebf5ee;
     color: black;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 10% auto 10%;
     width: 100%;
+}
+
+.cardContainer {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
 .contentCard {
@@ -108,11 +118,17 @@ button {
 .footer {
     grid-column: 1 / 4;
     margin-top: 20px;
-    padding: 2rem;
+    padding: 2rem 4rem 0px 4rem;
     display: grid;
     grid-auto-columns: auto;
     background-color: #111111;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+}
+
+.footerColumnContainer {
+    display: grid;
+    grid-auto-columns: auto auto auto;
+    padding: 0px 6rem 0px rem;
 }
 
 #footerColumn1 { 
@@ -129,7 +145,7 @@ button {
 }
 
 .flis {
-    margin: 10px;
+    margin: 30px;
     color: grey;
 }
 
