@@ -2,8 +2,8 @@ body { margin: 0;}
 
 .parent {
     display: grid;
-    grid-template-columns: 15% auto auto 15%;
-    grid-template-rows: 10% auto 10% 10%;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 10% auto auto 10%;
     font-family: monospace;
     background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
     color: white;
@@ -26,7 +26,7 @@ ul {
 }
 
 .horizontalLisRJ {
-    color: yellow;
+    color: rgb(214, 163, 21);
     display: inline;
     margin: 20px 10px 20px 10px;
 }
@@ -106,7 +106,7 @@ button {
 /* FOOTER CONTENT*/
 
 .footer {
-    grid-column: 2 / 4;
+    grid-column: 1 / 4;
     margin-top: 20px;
     padding: 2rem;
     display: grid;
@@ -134,8 +134,4 @@ button {
 }
 
 
-@media screen and (max-width:1100px) {
-  
-    
-    
-}
+@media screen and (max-width: 800px){ }
