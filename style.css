@@ -42,7 +42,7 @@ button {
     color: white;
     font-family: monospace;
     padding: 10px 20px 10px 20px;
-    border: 1px solid yellow;
+    border: 1px solid rgb(214, 163, 21);
     font-size: 12px;
 }
 
@@ -58,7 +58,7 @@ button {
     padding: 1rem;
 }
 
-/* END PADDING START CONTENT SPACE */
+/* PHOTO SPLASH CONTENT SPACE */
 
 .iframe {
     grid-column: 2 / 3;
@@ -70,11 +70,35 @@ button {
     width: 100%;
 }
 
+/* FULL SITE WIDTH CONTENT SPACE */
+
 .fullWidthContent {
     grid-column: 1 / 4;
     background-color: #ebf5ee;
     color: black;
+    display: grid;
+    grid-template-columns: 10% auto auto auto 10%;
+    width: 100%;
 }
+
+.contentCard {
+    margin: 40px 15px 40px 15px;
+    border: 1px solid rgb(214, 163, 21);
+    background-color: #00334d;
+    color: white;
+    text-align: left;
+    font-size: 10px;
+}
+
+.cCImg {
+    width: 100%;
+}
+
+.cCText {
+    display: block;
+}
+
+/* FOOTER CONTENT*/
 
 .footer {
     grid-column: 1 / 4;
