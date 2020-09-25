@@ -32,6 +32,10 @@ ul {
     margin: 20px 10px 20px 10px;
 }
 
+#logoBlock {
+    display: inline;
+}
+
 .HIDDEN {
     display: none;
 }
@@ -125,16 +129,20 @@ button {
 .fullWidthContent {
     grid-column: 1 / 4;
     margin-top: 20px;
+    padding-top: 80px;
     padding-bottom: 50px;
-    background-color: #ebf5ee;
+    background-color: white;
     color: black;
     display: grid;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 15% auto 15%;
 }
 
-h4 {
-    font-size: 22px;
+#featuredText {
+    grid-column: 2 /3;
+    margin: 20px 10px 10px 10px;
+    color: grey;
 }
+
 
 .cardContainer {
     grid-column: 2 / 3;
@@ -145,11 +153,24 @@ h4 {
 .contentCard {
     margin: 20px 10px 10px 10px;
     background-color: white;
-    border: 1px solid rgb(214, 163, 21);
+    border: 0px solid rgb(214, 163, 21);
     padding: 10px;
     color: rgb(65, 65, 65);
+    letter-spacing: -1px;
     text-align: left;
     font-size: 14px;
+}
+
+.contentBanner {
+    grid-column: 1 /4;
+    height: 400px;
+    background-color: white;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+}
+
+h4 {
+    font-size: 22px;
 }
 
 .cCImg {
@@ -195,9 +216,11 @@ h4 {
 .flis {
     margin: 30px;
     color: grey;
+    background-color: #111111;
 }
 
 #footerText {
+    grid-column: 1 / 4;
     color: grey;
 }
 
@@ -284,6 +307,10 @@ h4 {
         grid-column: 1 / 4;
         display: grid;
         grid-template-columns: auto;
+    }
+
+    .contentCard {
+        margin: 20px 60px 10px 60px;
     }
 
     .cCImg {
