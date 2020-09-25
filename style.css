@@ -48,7 +48,12 @@ ul {
     transform: translateY(25%);
 }
 
-#tinyLogo {
+.tinyLogoTOP {
+    height: 18px;
+    margin: 0 10px 0 10px;
+}
+
+.tinyLogoBOTTOM {
     height: 18px;
     margin: 0 10px 0 10px;
 }
@@ -171,7 +176,7 @@ button {
 
 
 
-@media screen and (max-width:1150px){
+@media screen and (max-width:1200px){
   
     .parent {
         display: grid;
@@ -207,7 +212,7 @@ button {
 
 }
 
-@media screen and (max-width:830px){
+@media screen and (max-width:910px){
   
     .parent {
         display: grid;
@@ -248,6 +253,19 @@ button {
 
     .footer {
         letter-spacing: 1px;
+    }
+
+    .hideSMWord {
+        display: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .tinyLogoBOTTOM {
+        height: 40px;
+        margin: 0 10px 0 10px;
     }
 
 }
