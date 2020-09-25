@@ -305,8 +305,7 @@ h4 {
 
     .cardContainer {
         grid-column: 1 / 4;
-        display: grid;
-        grid-template-columns: auto;
+        display: block
     }
 
     .contentCard {
