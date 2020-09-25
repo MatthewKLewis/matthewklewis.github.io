@@ -115,7 +115,7 @@ button {
 #overImageText {
     transform: translateY(60px) translateX(20px);
     margin: 0px
-}
+} #overImageText:hover { text-shadow: 3px 3px rgb(255, 0, 0);}
 
 #overImageText2 {
     transform: translateX(-40px);
