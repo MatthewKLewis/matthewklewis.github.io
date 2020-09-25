@@ -1,13 +1,12 @@
-html { 
-    margin: 0; 
-    background-color: #111111;
-}
+/* 9-25: Set up a media query that burger-fies the top menu and turns the cards section to have a single column layout */
 
+body {margin: 0;}
+a { text-decoration: none; color: white;}
 
 .parent {
     display: grid;
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: 150px auto auto 10%;
+    grid-template-rows: 150px auto auto auto;
     font-family: monospace;
     background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
     color: white;
@@ -16,6 +15,9 @@ html {
 .header{
     grid-column: 2 / 3;
     font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
 }
 
 ul {
@@ -29,10 +31,16 @@ ul {
     margin: 20px 10px 20px 10px;
 }
 
-.horizontalLisRJ {
-    color: rgb(214, 163, 21);
+.HIDDEN {
+    display: none;
+}
+
+.burgerBox {
     display: inline;
-    margin: 20px 10px 20px 10px;
+}
+
+.orangeLinks {
+    color: rgb(214, 163, 21);
 }
 
 #abbaLogo {
@@ -53,6 +61,15 @@ button {
     border: 1px solid rgb(214, 163, 21);
     font-size: 12px;
 }
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    border-radius: 20px;
+    margin: 3px;
+    background-color: white;
+    display: block;
+  }
 
 /* END HEADER START PADDING SPACE */
 
@@ -95,13 +112,13 @@ button {
 }
 
 .contentCard {
-    margin: 20px 15px 40px 15px;
+    margin: 20px 10px 40px 10px;
     background-color: white;
     border: 1px solid rgb(214, 163, 21);
     padding: 10px;
     color: rgb(65, 65, 65);
     text-align: left;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .cCImg {
@@ -117,17 +134,17 @@ button {
 
 .footer {
     grid-column: 1 / 4;
-    margin-top: 20px;
     padding: 2rem 4rem 0px 4rem;
     display: grid;
-    grid-auto-columns: auto;
+    grid-auto-columns: 10% auto 10%;
     background-color: #111111;
     letter-spacing: 4px;
 }
 
 .footerColumnContainer {
     display: grid;
-    grid-auto-columns: auto auto auto;
+    grid-column: 2 / 3;
+    grid-auto-columns: 33.3% 33.3% 33.3%;
     padding: 0px 6rem 0px rem;
 }
 
@@ -141,7 +158,6 @@ button {
 
 #footerColumn3 { 
     grid-column: 3 / 4;
-    text-align: right;
 }
 
 .flis {
@@ -149,9 +165,89 @@ button {
     color: grey;
 }
 
+#footerText {
+    color: grey;
+}
 
-@media screen and (max-width: 1238){ 
-    * {
-        border: 2px solid red;
+
+
+@media screen and (max-width:1150px){
+  
+    .parent {
+        display: grid;
+        grid-template-columns: 5% auto 5%;
+        grid-template-rows: 100px auto auto auto;
+        font-family: monospace;
+        color: white;
     }
+    
+    .header {
+        background-color: black;
+        grid-column: 1 / 4;
+
+    }
+
+    #abbaLogo {
+        height: 30px;
+        transform: translateY(25%);
+    }
+
+    .cardContainer {
+        grid-column: 1 / 4;
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    .footerColumnContainer {
+        display: grid;
+        grid-column: 1 / 4;
+        grid-auto-columns: 33.3% 33.3% 33.3%;
+        padding: 0px 6rem 0px rem;
+    }
+
+}
+
+@media screen and (max-width:830px){
+  
+    .parent {
+        display: grid;
+        grid-template-columns: 5% auto 5%;
+        grid-template-rows: 100px auto auto auto;
+        font-family: monospace;
+        color: white;
+    }
+
+    .header{
+        grid-row: 1;
+        grid-column: 1 / span 3;
+        display: flex;
+        place-items: center;
+    }
+
+    #hideList {
+        display: none;           
+    }
+
+    .HIDDEN {
+        display: block;
+    }
+
+    #hiddenLogo {
+        height: 30px;
+    }
+
+    /* Second part of the webpage */
+
+    .cardContainer {
+        grid-column: 1 / 4;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    /* Third part of the webpage */
+
+    .footer {
+        letter-spacing: 1px;
+    }
+
 }
