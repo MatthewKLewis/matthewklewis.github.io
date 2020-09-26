@@ -75,7 +75,8 @@ button {
     padding: 10px 30px 10px 30px;
     border: 1px solid rgb(214, 163, 21);
     font-size: 12px;
-} button:hover { background-color: rgb(214, 163, 21); color: black; }
+    transition: 500ms;
+} button:hover { background-color: rgb(214, 163, 21); color: black;}
 
 .burger div{
     width: 25px;
@@ -161,6 +162,7 @@ button {
     letter-spacing: -1px;
     text-align: left;
     font-size: 14px;
+    transition: 500ms;
 } .contentCard:hover { background-color: #eeeeee; box-shadow: 4px 4px #dddddd;}
 
 .contentBanner {
@@ -175,6 +177,7 @@ h4 {
     font-size: 22px;
 }
 
+h5 { font-size: 18px; transition: 500ms;}
 h5:hover { letter-spacing: 2px;}
 
 .cCImg {
@@ -353,6 +356,7 @@ h5:hover { letter-spacing: 2px;}
         height: 40px;
         margin: 0 10px 0 10px;
         opacity: 60%;
+        transition: 500ms;
     } .tinyLogoBOTTOM:hover { opacity: 100%;}
 
 }
