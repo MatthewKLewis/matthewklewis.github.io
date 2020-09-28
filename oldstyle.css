@@ -256,7 +256,59 @@ h5:hover { letter-spacing: 2px;}
     .parent {
         display: grid;
         grid-template-columns: 5% auto 5%;
-        grid-template-rows: 100px auto auto 400px;
+        grid-template-rows: 100px auto auto auto;
+        font-family: monospace;
+        color: white;
+    }
+    
+    .header {
+        background-color: black;
+        grid-column: 1 / 4;
+
+    }
+
+    ul {
+        letter-spacing: 1px;
+    }
+
+    .horizontalLis {
+        color: white;
+        display: inline;
+        margin: 20px 5px 20px 5px;
+    }
+
+    #abbaLogo {
+        height: 30px;
+        transform: translateY(25%);
+    }
+
+    #featuredText {
+        grid-column: 1 / 4;
+        margin: 20px 10px 10px 20px;
+        color: grey;
+    }
+
+    .cardContainer {
+        grid-column: 1 / 4;
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    .footerColumnContainer {
+        display: grid;
+        grid-column: 1 / 4;
+        grid-auto-columns: 33.3% 33.3% 33.3%;
+        padding: 0px 6rem 0px rem;
+    }
+
+}
+
+@media screen and (max-width:1200px){
+  
+    .parent {
+        display: grid;
+        grid-template-columns: 5% auto 5%;
+        grid-template-rows: 100px auto auto auto;
         font-family: monospace;
         color: white;
     }
@@ -293,7 +345,7 @@ h5:hover { letter-spacing: 2px;}
     }
 
     .contentCard {
-        height: 1100px;
+        height: 600px;
         margin: 20px 60px 10px 60px;
     }
 
