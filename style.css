@@ -2,327 +2,378 @@
 
 @media screen and (max-width:12000px){
 
-/* de-defaulting section */
-
-body {margin: 0;}
-a { text-decoration: none; color: white;} a:hover { color: rgb(214, 163, 21)}
-
-/* end de-defaulting section */
-
-.parent {
-    display: grid;
-    grid-template-columns: 15% auto 15%;
-    grid-template-rows: 70px auto auto auto;
-    font-family: monospace;
-    background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
-    color: white;
-}
-
-.header{
-    grid-column: 1 / 4;
-    font-size: 12px;
-    display: flex;
-    justify-content: space-around;
-    place-items: center;
-}
-
-ul {
-    letter-spacing: 1.5px;
-}
-
-.horizontalLis {
-    display: inline;
-    margin: 20px 10px 20px 10px;
-}
-
-#logoBlock {
-    display: inline;
-}
-
-.HIDDEN {
-    display: none;
-}
-
-.burgerBox {
-    display: inline;
-}
-
-.orangeLinks {
-    color: rgb(214, 163, 21);
-    font-weight: bold;
-} .orangeLinks:hover { color: white; }
-
-#abbaLogo {
-    height: 50px;
-    transform: translateY(35%);
-}
-
-.tinyLogoTOP {
-    height: 18px;
-    margin: 0 10px 0 10px;
-    transform: translateY(20%);
-}
-
-.tinyLogoBOTTOM {
-    height: 18px;
-    margin: 0 10px 0 10px;
-}
-
-button {
-    background-color: #00334d;
-    color: white;
-    font-family: monospace;
-    padding: 10px 30px 10px 30px;
-    border: 1px solid rgb(214, 163, 21);
-    font-size: 12px;
-    transition: 500ms;
-} button:hover { background-color: rgb(214, 163, 21); color: black;}
-
-.burger div{
-    width: 25px;
-    height: 2px;
-    border-radius: 20px;
-    margin: 3px;
-    background-color: white;
-    display: block;
-  }
-
-/* END HEADER START GUTTER SPACE */
-
-.left-side {
-     grid-column: 1 / 2;
-}
-
-.right-side {
-    grid-column: 3 / 4;
-}
-
-/* PHOTO SPLASH CONTENT SPACE */
-
-.iframe {
-    width: 100%;
-    grid-column: 2 / 3;
-    color: black;
-    font-size: 56px;
-    font-weight: bold;
-    text-shadow: 3px 3px  rgb(214, 163, 21);
-    margin-top: -30px;
-}
-
-.arrowHolder {
-    display: inline;
-}
-
-#overImageText {
-    transform: translateY(60px) translateX(20px);
-    margin: 0px
-} #overImageText:hover { text-shadow: 3px 3px rgb(255, 0, 0);}
-
-#overImageText2 {
-    transform: translateX(-40px);
-    float: right;
-    margin: 0px
-}
-
-#abbaPhoto {
-    width: 100%;
-}
-
-/* FULL SITE WIDTH CONTENT SPACE */
-
-.fullWidthContent {
-    grid-column: 1 / 4;
-    margin-top: 20px;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    background-color: white;
-    color: black;
-    display: grid;
-    grid-template-columns: 15% auto 15%;
-}
-
-#featuredText {
-    grid-column: 2 /3;
-    margin: 20px 10px 10px 20px;
-    color: grey;
-}
-
-.cardContainer {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-}
-
-.contentCard {
-    margin: 20px 10px 10px 10px;
-    background-color: white;
-    border: 0px solid rgb(214, 163, 21);
-    padding: 10px;
-    color: rgb(65, 65, 65);
-    letter-spacing: -1px;
-    text-align: left;
-    font-size: 14px;
-    transition: 500ms;
-} .contentCard:hover { background-color: #eeeeee; box-shadow: 4px 4px #dddddd;}
-
-.contentCardMonochrome {
-    margin: 20px 10px 10px 10px;
-    background-color: #eeeeee;
-    padding: 10px;
-    color: rgb(65, 65, 65);
-    text-align: center;
-    font-size: 14px;
-}
-
-.contentBanner1 {
-    grid-column: 2 / 4;
-    height: 400px;
-    background-color: white;
-    margin: 20px 10px 10px 10px;
-    padding: 10px;
-}
-
-.contentBanner2 {
-    grid-column: 1 / 3;
-    height: 400px;
-    background-color: white;
-    margin: 20px 10px 10px 10px;
-    padding: 10px;
-}
-
-h4 {
-    font-size: 22px;
-}
-
-h5 { font-size: 18px; transition: 500ms;}
-h5:hover { letter-spacing: 2px;}
-
-.cCImg {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.cCText {
-    font-size: 10px;
-}
-
-/* FOOTER CONTENT*/
-
-.footer {
-    grid-column: 1 / 4;
-    padding: 2rem 4rem 0px 4rem;
-    display: grid;
-    grid-auto-columns: 10% auto 10%;
-    background-color: #111111;
-    letter-spacing: 4px;
-}
-
-.footerColumnContainer {
-    grid-column: 2 / 3;
-    display: grid;    
-    grid-auto-columns: 33.3% 33.3% 33.3%;
-    padding: 0px 6rem 0px rem;
-}
-
-#footerColumn1 { 
-    grid-column: 1 / 2;
-}
-
-#footerColumn2 { 
-    grid-column: 2 / 3;
-}
-
-#footerColumn3 { 
-    grid-column: 3 / 4;
-}
-
-.flis {
-    margin: 30px;
-    color: grey;
-    background-color: #111111;
-}
-
-#footerText {
-    grid-column: 1 / 4;
-    color: grey;
-}
-
-} /* dont touch this, it's the end of a media query*/
-
-
-@media screen and (max-width:1400px){
-  
+    /* de-defaulting section */
+    
+    body {margin: 0;}
+    a { text-decoration: none; color: white;} a:hover { color: rgb(214, 163, 21)}
+    
+    /* end de-defaulting section */
+    
     .parent {
         display: grid;
-        grid-template-columns: 5% auto 5%;
-        grid-template-rows: 100px auto auto 400px;
+        grid-template-columns: 15% auto 15%;
+        grid-template-rows: 70px auto auto auto;
         font-family: monospace;
+        background: radial-gradient(ellipse at bottom, #0c2a38 0%, #0d1943 100%, #043f4f);
         color: white;
     }
-
+    
     .header{
-        grid-row: 1;
-        grid-column: 1 / span 3;
+        grid-column: 1 / 4;
+        font-size: 12px;
         display: flex;
+        justify-content: space-around;
         place-items: center;
     }
-
-    #hideList {
-        display: none;           
+    
+    ul {
+        letter-spacing: 1.5px;
     }
-
+    
+    .horizontalLis {
+        display: inline;
+        margin: 20px 10px 20px 10px;
+    }
+    
+    #logoBlock {
+        display: inline;
+    }
+    
     .HIDDEN {
-        display: block;
-    }
-
-    #hiddenLogo {
-        height: 30px;
-    }
-
-    /* Second part of the webpage */
-
-    .cardContainer {
-        grid-column: 1 / 4;
-        display: block
-    }
-
-    #featuredText {
-        grid-column: 1 / 4;
-        margin: 20px 10px 10px 70px;
-    }
-
-    .contentCard {
-        height: 1100px;
-        margin: 20px 60px 10px 60px;
-    }
-
-    .cCImg {
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-    }
-
-    /* Third part of the webpage */
-
-    .footer {
-        letter-spacing: 1px;
-        text-align: center;
-    }
-
-    .hideSMWord {
         display: none;
     }
-
-    ul {
-        list-style: none;
+    
+    .burgerBox {
+        display: inline;
     }
-
-    .tinyLogoBOTTOM {
-        height: 40px;
+    
+    .orangeLinks {
+        color: rgb(214, 163, 21);
+        font-weight: bold;
+    } .orangeLinks:hover { color: white; }
+    
+    #abbaLogo {
+        height: 50px;
+        transform: translateY(35%);
+    }
+    
+    .tinyLogoTOP {
+        height: 18px;
         margin: 0 10px 0 10px;
-        opacity: 60%;
+        transform: translateY(20%);
+    }
+    
+    .tinyLogoBOTTOM {
+        height: 18px;
+        margin: 0 10px 0 10px;
+    }
+    
+    button {
+        background-color: #00334d;
+        color: white;
+        font-family: monospace;
+        padding: 10px 30px 10px 30px;
+        border: 1px solid rgb(214, 163, 21);
+        font-size: 12px;
         transition: 500ms;
-    } .tinyLogoBOTTOM:hover { opacity: 100%;}
-
-}
+    } button:hover { background-color: rgb(214, 163, 21); color: black;}
+    
+    .burger div{
+        width: 25px;
+        height: 2px;
+        border-radius: 20px;
+        margin: 3px;
+        background-color: white;
+        display: block;
+      }
+    
+    /* END HEADER START GUTTER SPACE */
+    
+    .left-side {
+         grid-column: 1 / 2;
+    }
+    
+    .right-side {
+        grid-column: 3 / 4;
+    }
+    
+    /* PHOTO SPLASH CONTENT SPACE */
+    
+    .iframe {
+        width: 100%;
+        grid-column: 2 / 3;
+        color: black;
+        font-size: 56px;
+        font-weight: bold;
+        text-shadow: 3px 3px  rgb(214, 163, 21);
+        margin-top: -30px;
+    }
+    
+    .arrowHolder {
+        display: inline;
+    }
+    
+    #overImageText {
+        transform: translateY(60px) translateX(20px);
+        margin: 0px
+    } #overImageText:hover { text-shadow: 3px 3px rgb(255, 0, 0);}
+    
+    #overImageText2 {
+        transform: translateX(-40px);
+        float: right;
+        margin: 0px
+    }
+    
+    #abbaPhoto {
+        width: 100%;
+    }
+    
+    /* FULL SITE WIDTH CONTENT SPACE */
+    
+    .fullWidthContent {
+        grid-column: 1 / 4;
+        margin-top: 20px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        background-color: white;
+        color: black;
+        display: grid;
+        grid-template-columns: 15% auto 15%;
+    }
+    
+    #featuredText {
+        grid-column: 2 /3;
+        margin: 20px 10px 10px 20px;
+        color: grey;
+    }
+    
+    .cardContainer {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+    
+    .contentCard {
+        margin: 20px 10px 10px 10px;
+        background-color: white;
+        border: 0px solid rgb(214, 163, 21);
+        padding: 10px;
+        color: rgb(65, 65, 65);
+        letter-spacing: -1px;
+        text-align: left;
+        font-size: 14px;
+        transition: 500ms;
+    } .contentCard:hover { background-color: #eeeeee; box-shadow: 4px 4px #dddddd;}
+    
+    .contentCardMonochrome {
+        margin: 20px 10px 10px 10px;
+        background-color: #eeeeee;
+        padding: 10px;
+        color: rgb(65, 65, 65);
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .contentBanner1 {
+        grid-column: 2 / 4;
+        height: 400px;
+        background-color: white;
+        margin: 20px 10px 10px 10px;
+        padding: 10px;
+    }
+    
+    .contentBanner2 {
+        grid-column: 1 / 3;
+        height: 400px;
+        background-color: white;
+        margin: 20px 10px 10px 10px;
+        padding: 10px;
+    }
+    
+    h4 {
+        font-size: 22px;
+    }
+    
+    h5 { font-size: 18px; transition: 500ms;}
+    h5:hover { letter-spacing: 2px;}
+    
+    .cCImg {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .cCText {
+        font-size: 10px;
+    }
+    
+    /* FOOTER CONTENT*/
+    
+    .footer {
+        grid-column: 1 / 4;
+        padding: 2rem 4rem 0px 4rem;
+        display: grid;
+        grid-auto-columns: 10% auto 10%;
+        background-color: #111111;
+        letter-spacing: 4px;
+    }
+    
+    .footerColumnContainer {
+        grid-column: 2 / 3;
+        display: grid;    
+        grid-auto-columns: 33.3% 33.3% 33.3%;
+        padding: 0px 6rem 0px rem;
+    }
+    
+    #footerColumn1 { 
+        grid-column: 1 / 2;
+    }
+    
+    #footerColumn2 { 
+        grid-column: 2 / 3;
+    }
+    
+    #footerColumn3 { 
+        grid-column: 3 / 4;
+    }
+    
+    .flis {
+        margin: 30px;
+        color: grey;
+        background-color: #111111;
+    }
+    
+    #footerText {
+        grid-column: 1 / 4;
+        color: grey;
+    }
+    
+    } /* dont touch this, it's the end of a media query*/
+    
+    @media screen and (max-width:1200px){
+      
+        .parent {
+            display: grid;
+            grid-template-columns: 5% auto 5%;
+            grid-template-rows: 100px auto auto auto;
+            font-family: monospace;
+            color: white;
+        }
+        
+        .header {
+            background-color: black;
+            grid-column: 1 / 4;
+    
+        }
+    
+        ul {
+            letter-spacing: 1px;
+        }
+    
+        .horizontalLis {
+            color: white;
+            display: inline;
+            margin: 20px 5px 20px 5px;
+        }
+    
+        #abbaLogo {
+            height: 30px;
+            transform: translateY(25%);
+        }
+    
+        #featuredText {
+            grid-column: 1 / 4;
+            margin: 20px 10px 10px 20px;
+            color: grey;
+        }
+    
+        .cardContainer {
+            grid-column: 1 / 4;
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+        }
+    
+        .footerColumnContainer {
+            display: grid;
+            grid-column: 1 / 4;
+            grid-auto-columns: 33.3% 33.3% 33.3%;
+            padding: 0px 6rem 0px rem;
+        }
+    
+    }
+    
+    @media screen and (max-width:920px){
+      
+        .parent {
+            display: grid;
+            grid-template-columns: 5% auto 5%;
+            grid-template-rows: 100px auto auto auto;
+            font-family: monospace;
+            color: white;
+        }
+    
+        .header{
+            grid-row: 1;
+            grid-column: 1 / span 3;
+            display: flex;
+            place-items: center;
+        }
+    
+        #hideList {
+            display: none;           
+        }
+    
+        .HIDDEN {
+            display: block;
+        }
+    
+        #hiddenLogo {
+            height: 30px;
+        }
+    
+        /* Second part of the webpage */
+    
+        .cardContainer {
+            grid-column: 1 / 4;
+            display: block
+        }
+    
+        #featuredText {
+            grid-column: 1 / 4;
+            margin: 20px 10px 10px 70px;
+        }
+    
+        .contentCard {
+            height: 600px;
+            margin: 20px 60px 10px 60px;
+        }
+    
+        .cCImg {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+    
+        /* Third part of the webpage */
+    
+        .footer {
+            letter-spacing: 1px;
+            text-align: center;
+        }
+    
+        .hideSMWord {
+            display: none;
+        }
+    
+        ul {
+            list-style: none;
+        }
+    
+        .tinyLogoBOTTOM {
+            height: 40px;
+            margin: 0 10px 0 10px;
+            opacity: 60%;
+            transition: 500ms;
+        } .tinyLogoBOTTOM:hover { opacity: 100%;}
+    
+    }
