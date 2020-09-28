@@ -1,6 +1,6 @@
 /* 9-25: Set up a media query that burger-fies the top menu and turns the cards section to have a single column layout */
 
-@media screen and (max-width:12000px){
+@media screen and (max-width:16666px){
 
     /* de-defaulting section */
     
@@ -250,7 +250,7 @@
     
     } /* dont touch this, it's the end of a media query*/
     
-    @media screen and (max-width:1200px){
+    @media screen and (max-width: 1200px){
       
         .parent {
             display: grid;
@@ -302,7 +302,7 @@
     
     }
     
-    @media screen and (max-width:920px){
+    @media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
       
         .parent {
             display: grid;
@@ -344,8 +344,15 @@
         }
     
         .contentCard {
-            height: 600px;
             margin: 20px 60px 10px 60px;
+        }
+
+        .contentBanner1 {
+            font-size: 16px;
+        }
+
+        .contentBanner2 {
+            font-size: 16px;
         }
     
         .cCImg {
