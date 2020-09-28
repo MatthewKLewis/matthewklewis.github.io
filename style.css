@@ -194,7 +194,7 @@
         font-size: 22px;
     }
     
-    h5 { font-size: 18px; transition: 500ms;}
+    h5 { font-size: 14px; transition: 500ms;}
     h5:hover { letter-spacing: 2px;}
     
     .cCImg {
