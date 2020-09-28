@@ -250,7 +250,7 @@ h5:hover { letter-spacing: 2px;}
 
 } /* dont touch this, it's the end of a media query*/
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1400px){
   
     .parent {
         display: grid;
@@ -302,7 +302,7 @@ h5:hover { letter-spacing: 2px;}
 
 }
 
-@media screen and (max-width:920px){
+@media screen and (max-width:1200px){
   
     .parent {
         display: grid;
