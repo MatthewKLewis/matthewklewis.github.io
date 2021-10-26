@@ -12,27 +12,25 @@
 
 <body>
     <div class="wrapper">
-
         <nav class="navbar">
             <div class="nav-left">
                 <div id="homeButton" class="nav-button glass">Matthew Lewis</div>
-                <p style="opacity: 20%;" id="stats">Animation Offset: 0.00</p>
+                <div class="nav-button">
+                    <input type="checkbox" id="checkbox" name="scales">
+                    <label style="opacity: 50%;" for="checkbox">Animation Paused</label>
+                </div>
             </div>
             <div class="nav-right">
                 <div id="skillsButton" class="nav-button glass">Skills</div>
                 <div id="contactsButton" class="nav-button glass">Contact</div>
             </div>
         </nav>
-
         <div class="section splash">
         </div>
-
         <div class="canvas-container">
             <canvas id="webgl"></canvas>
         </div>
-
         <nav class="horiz"></nav>
-
         <div class="section skills">
             <div class="spacer"></div>
             <div class="grid">
@@ -101,11 +99,9 @@
                 </div>
             </div>
         </div>
-
         <div class="section contact">
             <div class="spacer"></div>
             <div class="grid">
-
                 <div class="grid-item-contact glass-dark">
                     <span>Contact Info:</span>
                     <ul>
@@ -114,7 +110,6 @@
                         <li>Location</li>
                     </ul>
                 </div>
-
                 <div class="grid-item-contact glass-dark">
                     <span>Internet Contact Info:</span>
                     <ul>
@@ -123,9 +118,12 @@
                     </ul>
                 </div>
                 <div class="grid-item-contact glass-dark scroll-y">
-                    <span>Current Design Rant (10/26/2021):</span>
+                    <span>Current Design Rants (10/26/2021):</span>
                     <p>Something is missing in web design today. From 2006 to 2011, Adobe Dreamweaver and the
-                        PhotoShop-sliced webpage ruled the internet.</p>
+                        PhotoShop-sliced webpage ruled the internet. There was an uninterupted continuum between the
+                        design of views and the images deployed to the end user.
+                        This paradigm was called WYSISYG.
+                    </p>
                     <p>
                         Amet consectetur adipisicing elit. Consequuntur cumque modi possimus praesentium asperiores
                         maiores voluptatum animi,
@@ -140,5 +138,4 @@
     </div>
     <script src="./script.js"></script>
 </body>
-
 </html>

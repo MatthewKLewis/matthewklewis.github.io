@@ -4,10 +4,12 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 
 var scrollPercent = 0
+var animating = true
 const STATS_ELEMENT = document.querySelector('#stats')
 const HOME_ELEMENT = document.querySelector('#homeButton')
 const SKILLS_ELEMENT = document.querySelector('#skillsButton')
 const CONTACTS_ELEMENT = document.querySelector('#contactsButton')
+const CHECK_ELEMENT = document.querySelector('#checkbox')
 function getScrollPercent() {
     var h = document.documentElement, 
         b = document.body,
@@ -26,9 +28,10 @@ document.addEventListener('scroll', (evt)=>{
     scrollPercent = getScrollPercent().toFixed(2)
     STATS_ELEMENT.innerText = 'Animation Offset: ' + scrollPercent
 })
-HOME_ELEMENT.addEventListener('click', ()=>{console.log(HOME_ELEMENT);  window.scrollTo({top: 0, behavior: 'smooth'})})
-SKILLS_ELEMENT.addEventListener('click', ()=>{console.log(SKILLS_ELEMENT);  window.scrollTo({top: getMidpointPixels(), behavior: 'smooth'})})
-CONTACTS_ELEMENT.addEventListener('click', ()=>{console.log(CONTACTS_ELEMENT);  window.scrollTo({top: 9999999, behavior: 'smooth'})})
+HOME_ELEMENT.addEventListener('click', ()=>{ window.scrollTo({top: 0, behavior: 'smooth'})})
+SKILLS_ELEMENT.addEventListener('click', ()=>{ window.scrollTo({top: getMidpointPixels(), behavior: 'smooth'})})
+CONTACTS_ELEMENT.addEventListener('click', ()=>{ window.scrollTo({top: 9999999, behavior: 'smooth'})})
+CHECK_ELEMENT.addEventListener('click', ()=>{ animating = !animating })
 
 //#region [rgba(25, 128, 128, 0.15) ] RENDERER (VIEW)
 /*  
@@ -102,8 +105,10 @@ var timeOfLastFrame = 0
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
 
-    cube.rotateX(scrollPercent / 5000)
-    cube.rotateY(scrollPercent / 6000)
+    if (animating) {
+        cube.rotateX(scrollPercent / 5000)
+        cube.rotateY(scrollPercent / 6000)
+    }
 
     // Render
     composer.render(scene, camera)
