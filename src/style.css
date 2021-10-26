@@ -1,0 +1,114 @@
+* {
+    font-family: monospace;
+    font-size: 18px;
+}
+body {
+    margin: 0 40px 0px 40px;
+    color: white;
+    background: linear-gradient(rgb(62, 83, 74),rgb(8, 23, 36));
+}
+.section {
+    position: relative;
+    height: 100vh;
+    z-index: 2;
+}
+
+/* NAV */
+.navbar {
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 100;
+}
+.nav-button {
+    margin-top: 12px;
+    margin-right: 6px;
+    padding: 12px;
+    cursor: pointer;
+}
+.nav-left {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 10px;
+    left: 6px;
+}
+.nav-right {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 10px;
+    right: 96px;
+}
+
+/* SPLASH */
+.splash {
+    text-align: center;
+}
+.canvas-container {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    opacity: 15%;
+    z-index: 1;
+}
+#canvas {
+    width: 100%;
+    width: 100%;
+}
+
+/* SKILLS */
+.skills {
+}
+.spacer {
+    height: 10vh;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+}
+.grid-item {
+    margin: 2px;
+    padding: 20px;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: row;
+}
+.grid-text {
+    padding: 20px;
+    width: 100%;
+}
+
+/* CONTACT */
+.contact {
+}
+.grid-item-contact {
+    margin: 2px;
+    padding: 20px;
+    min-height: 70vh;
+}
+
+/* DESIGN */
+.glass {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(152, 125, 163, 0.27);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.glass-dark {
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(223, 210, 110, 0.17);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba(242, 255, 0, 0.18);
+}
+.scroll-y {
+    overflow-y: scroll;
+}
