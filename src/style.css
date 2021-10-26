@@ -81,6 +81,7 @@ body {
 
 /* CONTACT */
 .contact {
+    display: block;
 }
 .grid-item-contact {
     margin: 2px;
