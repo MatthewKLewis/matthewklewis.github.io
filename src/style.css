@@ -5,7 +5,7 @@
 body {
     margin: 0 40px 0px 40px;
     color: white;
-    background: linear-gradient(rgb(62, 83, 74),rgb(8, 23, 36));
+    background: linear-gradient(rgb(30, 44, 38),rgb(5, 19, 31));
 }
 .section {
     position: relative;
@@ -52,7 +52,7 @@ body {
     right: 0px;
     top: 0px;
     bottom: 0px;
-    opacity: 15%;
+    opacity: 20%;
     z-index: 1;
 }
 #canvas {
