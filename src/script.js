@@ -81,7 +81,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 */
 camera.lookAt(0,0,0)
 
-const geometry = new THREE.BoxGeometry();
+const geometry = new THREE.IcosahedronGeometry(.7);
 const material = new THREE.MeshLambertMaterial( { color: 0xffffff } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
@@ -107,7 +107,7 @@ const tick = () => {
 
     if (animating) {
         cube.rotateX(scrollPercent / 5000)
-        cube.rotateY(scrollPercent / 6000)
+        cube.rotateY(scrollPercent / 5000)
     }
 
     // Render
