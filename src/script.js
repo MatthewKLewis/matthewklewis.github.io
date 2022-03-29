@@ -121,7 +121,7 @@ var timeOfLastFrame = 0
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
 
-    if (animating) {
+    if (animating && model) {
         model.rotateX(scrollPercent / 5000)
         model.rotateY(scrollPercent / 5000)
     }
