@@ -79,7 +79,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 *
 */
 camera.lookAt(0,0,0)
-
+let model;
 const fbxLoader = new FBXLoader()
 fbxLoader.load(
     './models/hardsuit.fbx',
@@ -92,10 +92,10 @@ fbxLoader.load(
                 }
             }
         })
-        object.scale.set(.01, .01, .01)
+        object.scale.set(.005, .005, .005)
         object.name = 'hardsuit';
         scene.add(object)
-        console.log('hello')
+        model = object
     },
     (xhr) => {
         console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -107,8 +107,8 @@ fbxLoader.load(
 
 const geometry = new THREE.IcosahedronGeometry(.7);
 const material = new THREE.MeshLambertMaterial( { color: 0xffffff } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+// const cube = new THREE.Mesh( geometry, material );
+// scene.add( cube );
 
 const light = new THREE.SpotLight(0xFFFFFF, 1);
 light.position.x = 1.3
@@ -130,8 +130,8 @@ const tick = () => {
     const elapsedTime = clock.getElapsedTime()
 
     if (animating) {
-        cube.rotateX(scrollPercent / 5000)
-        cube.rotateY(scrollPercent / 5000)
+        model.rotateX(scrollPercent / 5000)
+        model.rotateY(scrollPercent / 5000)
     }
 
     // Render
