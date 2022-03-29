@@ -84,14 +84,6 @@ const fbxLoader = new FBXLoader()
 fbxLoader.load(
     './models/hardsuit.fbx',
     (object) => {
-        object.traverse(function (child) {
-            if ((child).isMesh) {
-                (child).material = material
-                if ((child).material) {
-                    ((child).material).transparent = false
-                }
-            }
-        })
         object.scale.set(.005, .005, .005)
         object.name = 'hardsuit';
         scene.add(object)
