@@ -2,10 +2,10 @@ import './style.css'
 import * as THREE from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 
 var scrollPercent = 0
 var animating = true
-const STATS_ELEMENT = document.querySelector('#stats')
 const HOME_ELEMENT = document.querySelector('#homeButton')
 const SKILLS_ELEMENT = document.querySelector('#skillsButton')
 const CONTACTS_ELEMENT = document.querySelector('#contactsButton')
@@ -26,7 +26,6 @@ function getMidpointPixels() {
 }
 document.addEventListener('scroll', (evt)=>{
     scrollPercent = getScrollPercent().toFixed(2)
-    STATS_ELEMENT.innerText = 'Animation Offset: ' + scrollPercent
 })
 HOME_ELEMENT.addEventListener('click', ()=>{ window.scrollTo({top: 0, behavior: 'smooth'})})
 SKILLS_ELEMENT.addEventListener('click', ()=>{ window.scrollTo({top: getMidpointPixels(), behavior: 'smooth'})})
@@ -81,6 +80,31 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 */
 camera.lookAt(0,0,0)
 
+const fbxLoader = new FBXLoader()
+fbxLoader.load(
+    './models/hardsuit.fbx',
+    (object) => {
+        object.traverse(function (child) {
+            if ((child).isMesh) {
+                (child).material = material
+                if ((child).material) {
+                    ((child).material).transparent = false
+                }
+            }
+        })
+        object.scale.set(.01, .01, .01)
+        object.name = 'hardsuit';
+        scene.add(object)
+        console.log('hello')
+    },
+    (xhr) => {
+        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+    },
+    (error) => {
+        //console.log(error)
+    }
+)
+
 const geometry = new THREE.IcosahedronGeometry(.7);
 const material = new THREE.MeshLambertMaterial( { color: 0xffffff } );
 const cube = new THREE.Mesh( geometry, material );
@@ -90,7 +114,7 @@ const light = new THREE.SpotLight(0xFFFFFF, 1);
 light.position.x = 1.3
 light.position.z = 1
 scene.add(light);
-scene.fog = new THREE.FogExp2( '#1a2b31', 0.9 );console.log(scene);
+scene.fog = new THREE.FogExp2( '#1a2b31', 0.9 );
 //#endregion
 
 //#region [rgba(255, 255, 255, 0.15) ] UPDATE
