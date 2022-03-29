@@ -79,12 +79,13 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 *
 */
 camera.lookAt(0,0,0)
+
 let model;
 const fbxLoader = new FBXLoader()
 fbxLoader.load(
     './models/hardsuit.fbx',
     (object) => {
-        object.scale.set(.005, .005, .005)
+        object.scale.set(.007, .007, .007)
         object.name = 'hardsuit';
         scene.add(object)
         model = object
@@ -122,7 +123,6 @@ const tick = () => {
     const elapsedTime = clock.getElapsedTime()
 
     if (animating && model) {
-        model.rotateX(scrollPercent / 5000)
         model.rotateY(scrollPercent / 5000)
     }
 
