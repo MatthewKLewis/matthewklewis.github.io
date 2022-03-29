@@ -78,7 +78,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 * This section sets off the game loop.
 *
 */
-camera.lookAt(0,1,0)
+camera.lookAt(0,0.5,0)
 
 let model;
 const fbxLoader = new FBXLoader()
