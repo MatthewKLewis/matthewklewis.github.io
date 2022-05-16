@@ -1,0 +1,18 @@
+* {
+    font-family: monospace;
+    margin: 0px;
+    background-color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+
+img {
+    display: block;
+    min-width: 100px;
+    min-height: 120px;
+    width: 100%;
+    margin: 0px auto;
+}
